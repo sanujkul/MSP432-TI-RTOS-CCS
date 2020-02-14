@@ -7,17 +7,21 @@
 #define CLEAR_P1_0 0xFE
 
 #define BUTTON11 0X02     //P1.1
+
+#define DELAY 180000
 /**
  * main.c
  */
 void main(void)
 {
-	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
+	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer: WDT_A_CTL_PW = 5A00h, WDT_A_CTL_HOLD = 0080h;
+
 
 	P1->DIR = DIR_OUT_P1_0;             //RED LED (P1.0) pin OUTPUT Direction
 
 	//Button1 is connected to P1.1
 	//It needs to be PULLED UP!!:)
+	//IN + HIGH + REN makes it puled up
 	P1->OUT = (uint8_t)BUTTON11;                 //Making it HIGH
 	P1->REN = (uint8_t)BUTTON11;                 //Enabling the resistor for P1.1
 

@@ -2,7 +2,7 @@
 <link_info>
    <banner>TI ARM Linker Unix v18.12.4.LTS</banner>
    <copyright>Copyright (c) 1996-2018 Texas Instruments Incorporated</copyright>
-   <link_time>0x5e42916a</link_time>
+   <link_time>0x5e6228b1</link_time>
    <link_errors>0x0</link_errors>
    <output_file>Timer_All_PWMs.out</output_file>
    <entry_point>
@@ -389,7 +389,7 @@
          <size>0x10a</size>
          <input_file_ref idref="fl-c0"/>
       </object_component>
-      <object_component id="oc-53">
+      <object_component id="oc-54">
          <name>.debug_info</name>
          <load_address>0x6dc9</load_address>
          <run_address>0x6dc9</run_address>
@@ -1136,7 +1136,7 @@
          <size>0x20</size>
          <input_file_ref idref="fl-bf"/>
       </object_component>
-      <object_component id="oc-54">
+      <object_component id="oc-53">
          <name>.debug_aranges</name>
          <load_address>0xb0</load_address>
          <run_address>0xb0</run_address>
@@ -1546,7 +1546,7 @@
             <object_component_ref idref="oc-b0"/>
             <object_component_ref idref="oc-6f"/>
             <object_component_ref idref="oc-27"/>
-            <object_component_ref idref="oc-53"/>
+            <object_component_ref idref="oc-54"/>
             <object_component_ref idref="oc-35"/>
             <object_component_ref idref="oc-119"/>
             <object_component_ref idref="oc-ce"/>
@@ -1693,7 +1693,7 @@
             <object_component_ref idref="oc-a4"/>
             <object_component_ref idref="oc-1c"/>
             <object_component_ref idref="oc-16"/>
-            <object_component_ref idref="oc-54"/>
+            <object_component_ref idref="oc-53"/>
             <object_component_ref idref="oc-36"/>
             <object_component_ref idref="oc-cf"/>
             <object_component_ref idref="oc-8c"/>

@@ -4,7 +4,7 @@
 //  The example code shows proper initialization of registers
 //  and interrupts to receive and transmit data.
 //
-//                MSP432P401
+//                MSP432P4111
 //             -----------------
 //         /|\|                 |
 //          | |                 |
@@ -15,6 +15,7 @@
 //            |     P1.2/UCA0RXD|<---- PC
 //            |                 |
 //
+//   This code is developed on basis of examples by: (On other developement board)
 //   William Goh
 //   Texas Instruments Inc.
 //   June 2016 (updated) | June 2014 (created)

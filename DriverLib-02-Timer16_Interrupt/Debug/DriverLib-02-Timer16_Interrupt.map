@@ -1,0 +1,253 @@
+******************************************************************************
+                  TI ARM Linker Unix v18.12.4                  
+******************************************************************************
+>> Linked Thu Mar 19 17:02:20 2020
+
+OUTPUT FILE NAME:   <DriverLib-02-Timer16_Interrupt.out>
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 000002a1
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  MAIN                  00000000   00200000  000002fa  001ffd06  R  X
+  INFO                  00200000   00008000  00000000  00008000  R  X
+  SRAM_CODE             01000000   00040000  00000200  0003fe00  RW X
+  SRAM_DATA             20000000   00040000  00000200  0003fe00  RW  
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    000002fc   000002fc    r-x
+  00000000    00000000    000000e8   000000e8    r-- .intvecs
+  000000e8    000000e8    000001fa   000001fa    r-x .text
+  000002e4    000002e4    00000018   00000018    r-- .const
+2003fe00    2003fe00    00000200   00000000    rw-
+  2003fe00    2003fe00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000e8     
+                  00000000    000000e8     startup_msp432p4111_ccs.obj (.intvecs:retain)
+
+.text      0    000000e8    000001fa     
+                  000000e8    000000cc     timer_a_upmode_gpio_toggle.obj (.text:main)
+                  000001b4    00000094     system_msp432p4111.obj (.text:SystemInit)
+                  00000248    0000002c     timer_a_upmode_gpio_toggle.obj (.text:TA1_0_IRQHandler)
+                  00000274    0000002c     timer_a_upmode_gpio_toggle.obj (.text:TA2_0_IRQHandler)
+                  000002a0    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs:_c_int00_noinit_noargs)
+                  000002cc    0000000c     startup_msp432p4111_ccs.obj (.text:Reset_Handler)
+                  000002d8    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  000002dc    00000004                                   : exit.c.obj (.text:abort:abort)
+                  000002e0    00000002     startup_msp432p4111_ccs.obj (.text:Default_Handler)
+
+.const     0    000002e4    00000018     
+                  000002e4    00000018     timer_a_upmode_gpio_toggle.obj (.const:upConfig)
+
+.cinit     0    00000000    00000000     UNINITIALIZED
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.stack     0    2003fe00    00000200     UNINITIALIZED
+                  2003fe00    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  2003fe04    000001fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                           code   ro data   rw data
+       ------                           ----   -------   -------
+    ./
+       timer_a_upmode_gpio_toggle.obj   292    24        0      
+       system_msp432p4111.obj           148    0         0      
+    +--+--------------------------------+------+---------+---------+
+       Total:                           440    24        0      
+                                                                
+    ./ccs/
+       startup_msp432p4111_ccs.obj      14     232       0      
+    +--+--------------------------------+------+---------+---------+
+       Total:                           14     232       0      
+                                                                
+    /Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
+       boot_cortex_m.c.obj              44     0         0      
+       exit.c.obj                       4      0         0      
+       pre_init.c.obj                   4      0         0      
+    +--+--------------------------------+------+---------+---------+
+       Total:                           52     0         0      
+                                                                
+       Stack:                           0      0         1024   
+    +--+--------------------------------+------+---------+---------+
+       Grand Total:                     506    256       1024   
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                  
+-------   ----                  
+000002e1  ADC14_IRQHandler      
+000002e1  AES256_IRQHandler     
+000002e1  BusFault_Handler      
+000002dd  C$$EXIT               
+000002e1  COMP_E0_IRQHandler    
+000002e1  COMP_E1_IRQHandler    
+000002e1  CS_IRQHandler         
+000002e1  DMA_ERR_IRQHandler    
+000002e1  DMA_INT0_IRQHandler   
+000002e1  DMA_INT1_IRQHandler   
+000002e1  DMA_INT2_IRQHandler   
+000002e1  DMA_INT3_IRQHandler   
+000002e1  DebugMon_Handler      
+000002e1  Default_Handler       
+000002e1  EUSCIA0_IRQHandler    
+000002e1  EUSCIA1_IRQHandler    
+000002e1  EUSCIA2_IRQHandler    
+000002e1  EUSCIA3_IRQHandler    
+000002e1  EUSCIB0_IRQHandler    
+000002e1  EUSCIB1_IRQHandler    
+000002e1  EUSCIB2_IRQHandler    
+000002e1  EUSCIB3_IRQHandler    
+000002e1  FLCTL_A_IRQHandler    
+000002e1  FPU_IRQHandler        
+000002e1  HardFault_Handler     
+000002e1  LCD_F_IRQHandler      
+000002e1  MemManage_Handler     
+000002e1  NMI_Handler           
+000002e1  PCM_IRQHandler        
+000002e1  PORT1_IRQHandler      
+000002e1  PORT2_IRQHandler      
+000002e1  PORT3_IRQHandler      
+000002e1  PORT4_IRQHandler      
+000002e1  PORT5_IRQHandler      
+000002e1  PORT6_IRQHandler      
+000002e1  PSS_IRQHandler        
+000002e1  PendSV_Handler        
+000002e1  RTC_C_IRQHandler      
+000002cd  Reset_Handler         
+000002e1  SVC_Handler           
+000002e1  SysTick_Handler       
+000001b5  SystemInit            
+000002e1  T32_INT1_IRQHandler   
+000002e1  T32_INT2_IRQHandler   
+000002e1  T32_INTC_IRQHandler   
+000002e1  TA0_0_IRQHandler      
+000002e1  TA0_N_IRQHandler      
+00000249  TA1_0_IRQHandler      
+00000249  TA1_0_IRQHandler      
+000002e1  TA1_N_IRQHandler      
+00000275  TA2_0_IRQHandler      
+00000275  TA2_0_IRQHandler      
+000002e1  TA2_N_IRQHandler      
+000002e1  TA3_0_IRQHandler      
+000002e1  TA3_N_IRQHandler      
+000002e1  UsageFault_Handler    
+4000480c  WDTCTL_SYM            
+000002e1  WDT_A_IRQHandler      
+20040000  __STACK_END           
+00000200  __STACK_SIZE          
+ffffffff  __TI_pprof_out_hndl   
+ffffffff  __TI_prof_data_size   
+ffffffff  __TI_prof_data_start  
+00000000  __TI_static_base__    
+ffffffff  __binit__             
+ffffffff  __c_args__            
+UNDEFED   __mpu_init            
+2003fe00  __stack               
+000002a1  _c_int00_noinit_noargs
+000002d9  _system_pre_init      
+000002dd  abort                 
+ffffffff  binit                 
+00000000  interruptVectors      
+000000e9  main                  
+000002e4  upConfig              
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                  
+-------   ----                  
+00000000  __TI_static_base__    
+00000000  interruptVectors      
+000000e9  main                  
+000001b5  SystemInit            
+00000200  __STACK_SIZE          
+00000249  TA1_0_IRQHandler      
+00000249  TA1_0_IRQHandler      
+00000275  TA2_0_IRQHandler      
+00000275  TA2_0_IRQHandler      
+000002a1  _c_int00_noinit_noargs
+000002cd  Reset_Handler         
+000002d9  _system_pre_init      
+000002dd  C$$EXIT               
+000002dd  abort                 
+000002e1  ADC14_IRQHandler      
+000002e1  AES256_IRQHandler     
+000002e1  BusFault_Handler      
+000002e1  COMP_E0_IRQHandler    
+000002e1  COMP_E1_IRQHandler    
+000002e1  CS_IRQHandler         
+000002e1  DMA_ERR_IRQHandler    
+000002e1  DMA_INT0_IRQHandler   
+000002e1  DMA_INT1_IRQHandler   
+000002e1  DMA_INT2_IRQHandler   
+000002e1  DMA_INT3_IRQHandler   
+000002e1  DebugMon_Handler      
+000002e1  Default_Handler       
+000002e1  EUSCIA0_IRQHandler    
+000002e1  EUSCIA1_IRQHandler    
+000002e1  EUSCIA2_IRQHandler    
+000002e1  EUSCIA3_IRQHandler    
+000002e1  EUSCIB0_IRQHandler    
+000002e1  EUSCIB1_IRQHandler    
+000002e1  EUSCIB2_IRQHandler    
+000002e1  EUSCIB3_IRQHandler    
+000002e1  FLCTL_A_IRQHandler    
+000002e1  FPU_IRQHandler        
+000002e1  HardFault_Handler     
+000002e1  LCD_F_IRQHandler      
+000002e1  MemManage_Handler     
+000002e1  NMI_Handler           
+000002e1  PCM_IRQHandler        
+000002e1  PORT1_IRQHandler      
+000002e1  PORT2_IRQHandler      
+000002e1  PORT3_IRQHandler      
+000002e1  PORT4_IRQHandler      
+000002e1  PORT5_IRQHandler      
+000002e1  PORT6_IRQHandler      
+000002e1  PSS_IRQHandler        
+000002e1  PendSV_Handler        
+000002e1  RTC_C_IRQHandler      
+000002e1  SVC_Handler           
+000002e1  SysTick_Handler       
+000002e1  T32_INT1_IRQHandler   
+000002e1  T32_INT2_IRQHandler   
+000002e1  T32_INTC_IRQHandler   
+000002e1  TA0_0_IRQHandler      
+000002e1  TA0_N_IRQHandler      
+000002e1  TA1_N_IRQHandler      
+000002e1  TA2_N_IRQHandler      
+000002e1  TA3_0_IRQHandler      
+000002e1  TA3_N_IRQHandler      
+000002e1  UsageFault_Handler    
+000002e1  WDT_A_IRQHandler      
+000002e4  upConfig              
+2003fe00  __stack               
+20040000  __STACK_END           
+4000480c  WDTCTL_SYM            
+ffffffff  __TI_pprof_out_hndl   
+ffffffff  __TI_prof_data_size   
+ffffffff  __TI_prof_data_start  
+ffffffff  __binit__             
+ffffffff  __c_args__            
+ffffffff  binit                 
+UNDEFED   __mpu_init            
+
+[75 symbols]

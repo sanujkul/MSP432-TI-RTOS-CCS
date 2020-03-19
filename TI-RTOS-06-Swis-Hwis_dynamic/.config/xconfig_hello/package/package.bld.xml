@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_hello" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/hello_pem4f.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="/Users/sanujkul/CCSworkspace_v9/TI-RTOS-01-blink/hello.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/hello_pem4f.mak" src="package.bld"/>
+        <srcFile name="package/cfg/hello_pem4f.oem4f.dep" src="package/cfg/hello_pem4f.c"/>
+        <srcFile name="package/cfg/hello_pem4f.dep" src="package/cfg/hello_pem4f.cfg"/>
+        <srcFile name="package/cfg/hello.xem4f.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_hello.tar.dep" src="package/rel/xconfig_hello.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.arm.elf.M4F"
+            version="ti.targets.arm.elf.M4F{1,0,18.12,4"
+            rawVersion="18.12.4"
+            platform="ti.platforms.tiva:TM4C1294NCPDT:1"
+            isa="v7M4"
+            suffix="em4f"
+            rootDir="/Applications/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS"
+            os="undefined"
+            rts="ti.targets.arm.rtsarm">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="hello"
+        pname="hello.pem4f"
+        target="ti.targets.arm.elf.M4F"
+        platform="ti.platforms.msp432:MSP432P4111"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/hello_pem4f.cfg"
+        xCfgPrefix="package/cfg/hello_pem4f"
+        cfgScript="/Users/sanujkul/CCSworkspace_v9/TI-RTOS-01-blink/hello.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="hello"
+        pname="hello.xem4f"
+        target="ti.targets.arm.elf.M4F"
+        platform="ti.platforms.msp432:MSP432P4111"
+        profile="release"
+        xCfgScript="package/cfg/hello_pem4f.cfg"
+        xCfgPrefix="package/cfg/hello_pem4f"
+        cfgScript="/Users/sanujkul/CCSworkspace_v9/TI-RTOS-01-blink/hello.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="hello.xem4f"
+        args=""
+        groupName="hello.xem4f"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_hello"
+        pname="xconfig_hello.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

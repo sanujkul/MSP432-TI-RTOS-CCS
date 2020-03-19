@@ -42,11 +42,7 @@
 /* BIOS Module Headers */
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Task.h>
-//#include <ti/sysbios/knl/Clock.h>
-//#include <ti/sysbios/knl/Event.h>
-//#include <ti/sysbios/knl/Semaphore.h>
-//#include <ti/sysbios/knl/Mailbox.h>
-
+#include <ti/sysbios/knl/Swi.h>
 
 // Driver header file
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
@@ -70,6 +66,9 @@ const Timer_A_UpModeConfig upConfig =
 
 //Static hardwareInterrupt, dine changes in .cfg file gui. This is done for timerA1 that has interrupt number 26
 void hwi_ledController(void);
+void swi_ledController(void);
+
+extern Swi_Handle swiTest;
 
 int main()
 {
@@ -108,9 +107,17 @@ int main()
     return(0);
 }
 
+
 void hwi_ledController(void){
-    MAP_GPIO_toggleOutputOnPin(GPIO_PORT_P1, GPIO_PIN0);
-    //Clear the timer interrupt flag:
+    System_printf("hello hwi_ledController \n");
+    Swi_post(swiTest);                      //Here Hwi tells Swi that we want to use it
+
     MAP_Timer_A_clearCaptureCompareInterrupt(TIMER_A1_BASE,
                 TIMER_A_CAPTURECOMPARE_REGISTER_0);
+}
+
+void swi_ledController(void)
+{
+    System_printf("hello swi_ledController \n");
+    MAP_GPIO_toggleOutputOnPin(GPIO_PORT_P1, GPIO_PIN0);
 }

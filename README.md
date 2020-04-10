@@ -1,9 +1,9 @@
 # MSP432P4111-CCS
-These are Code Composer Studio projects for TI's MSP432P4111 Launchpad
+These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on ARM Cortex M4 with Floating Point Unit.
 
 ### How can you check or run these projects?  
 1. Either you can import whole project on your CCS.  
-2. Or you can check out the main.c file in all the projects.  
+2. Or you can check out the main.c file in all the projects and use the way you want.  
 
 ## Projects explaination:  
 ### 1. Blink. 

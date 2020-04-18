@@ -5,7 +5,7 @@ These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on 
 1. Either you can import whole project on your CCS.  
 2. Or you can check out the main.c file in all the projects and use the way you want.  
 
-## TI - RTOS codes:
+## TI - RTOS Projects:
 
 ### 1. TI-RTOS-01-blink
 ### 2. TI-RTOS-02-idle_thread
@@ -18,7 +18,8 @@ These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on 
 ### 9. TI-RTOS-09-Semaphores
 ### 10. TI-RTOS-10-Semaphores-Deadlocks
 
-## Peripheral Codes written in Embedded C:  
+## Embedded C Projects:  
+
 ### 1. Blink. 
 This program plays with the onboard LED. It will turn on Onboard red LED (connected to P1.0) and switched RGB Led color in the sequence Red (P2.0) ->Green (P2.1) ->Blue (P2.2).  
 

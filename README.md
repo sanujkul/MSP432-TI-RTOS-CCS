@@ -25,6 +25,8 @@ These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on 
    8. Timer_All_PWMs
    9. UART_LoopbackTest
    
+***
+
 ## A. TI - RTOS Projects:
 
 ### 0. TI-RTOS APIs used: 
@@ -45,7 +47,14 @@ In this project, an ideal thread is created in the static way. Ideal thread is t
 ### 9. TI-RTOS-09-Semaphores
 ### 10. TI-RTOS-10-Semaphores-Deadlocks
 
+***
+
 ## B. Bare Metal Embedded C Projects:  
+### 0. Links to important datasheet and documents.
+   a. MSP432P4111 Microcontroller Launchpad User's guide - http://www.ti.com/lit/ug/slau747b/slau747b.pdf.  
+   b. MSP432P411x, MSP432P401x datasheet - http://www.ti.com/lit/ds/symlink/msp432p4111.pdf.  
+   c. MSP432P4xx SimpleLink™ Microcontrollers Tecnical Reference Manual- https://www.ti.com/lit/ug/slau356i/slau356i.pdf.  
+
 
 ### 1. Blink. 
 This program plays with the onboard LED. It will turn on Onboard red LED (connected to P1.0) and switched RGB Led color in the sequence Red (P2.0) ->Green (P2.1) ->Blue (P2.2).  

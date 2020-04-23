@@ -3,6 +3,7 @@ These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on 
 
 # Table of Contents
  ### A.  TI - RTOS Projects
+   0. TI-RTOS APIs used
    1. TI-RTOS-01-blink
    2. TI-RTOS-02-idle_thread
    3. TI-RTOS-03-Hwis_Thread
@@ -26,8 +27,15 @@ These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on 
    
 ## A. TI - RTOS Projects:
 
+### 0. TI-RTOS APIs used: 
+(to be added)
+
 ### 1. TI-RTOS-01-blink
+This is first project using TI-RTOS APIs. This project has only 1 task that toggles the LED. Task yields CPU for 1000 SYSTICKS after completion.
+
 ### 2. TI-RTOS-02-idle_thread
+In this project, an ideal thread is created in the static way. Ideal thread is thread that uses processor when no other tasks or SWIs or HWIs is using processor. Ideal task has lowest priority.
+
 ### 3. TI-RTOS-03-Hwis_Thread
 ### 4. TI-RTOS-04-Hwis_thread_dynamic
 ### 5. TI-RTOS-05-Swis_Thread 

@@ -1,11 +1,30 @@
 # MSP432P4111-CCS
 These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on ARM Cortex M4 with Floating Point Unit.
 
-### How can you check or run these projects?  
-1. Either you can import whole project on your CCS.  
-2. Or you can check out the main.c file in all the projects and use the way you want.  
-
-## TI - RTOS Projects:
+# Table of Contents
+ ### A.  TI - RTOS Projects
+   1. TI-RTOS-01-blink
+   2. TI-RTOS-02-idle_thread
+   3. TI-RTOS-03-Hwis_Thread
+   4. TI-RTOS-04-Hwis_thread_dynamic
+   5. TI-RTOS-05-Swis_Thread 
+   6. TI-RTOS-06-Swis-Hwis_dynamic
+   7. TI-RTOS-07-Task_Static
+   8. TI-RTOS-08-Task_Dynamic
+   9. TI-RTOS-09-Semaphores
+   10. TI-RTOS-10-Semaphores-Deadlocks
+ ### B.  Bare Metal Embedded C Projects
+   1. Blink.
+   2. PushButton_LED.  
+   3. Timers. 
+   4. TImer_Up_Long
+   5. TimerInterrupts
+   6. Timer0_PWM_Manual
+   7. Timer0_Semi_Auto_PWM
+   8. Timer_All_PWMs
+   9. UART_LoopbackTest
+   
+## A. TI - RTOS Projects:
 
 ### 1. TI-RTOS-01-blink
 ### 2. TI-RTOS-02-idle_thread
@@ -18,7 +37,7 @@ These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on 
 ### 9. TI-RTOS-09-Semaphores
 ### 10. TI-RTOS-10-Semaphores-Deadlocks
 
-## Embedded C Projects:  
+## B. Bare Metal Embedded C Projects:  
 
 ### 1. Blink. 
 This program plays with the onboard LED. It will turn on Onboard red LED (connected to P1.0) and switched RGB Led color in the sequence Red (P2.0) ->Green (P2.1) ->Blue (P2.2).  

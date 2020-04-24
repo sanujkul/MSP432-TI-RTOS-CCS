@@ -1,5 +1,9 @@
 # MSP432P4111-CCS
 These are Code Composer Studio projects for TI's MSP432P4111 Launchpad based on ARM Cortex M4 with Floating Point Unit.
+### Links to related datasheet and documents.
+   a. MSP432P4111 Microcontroller Launchpad User's guide - http://www.ti.com/lit/ug/slau747b/slau747b.pdf.  
+   b. MSP432P411x, MSP432P401x datasheet - http://www.ti.com/lit/ds/symlink/msp432p4111.pdf.  
+   c. MSP432P4xx SimpleLink™ Microcontrollers Tecnical Reference Manual- https://www.ti.com/lit/ug/slau356i/slau356i.pdf.  
 
 # Table of Contents
  ### A.  TI - RTOS Projects
@@ -39,9 +43,17 @@ This is first project using TI-RTOS APIs. This project has only 1 task that togg
 In this project, an ideal thread is created in the static way. Ideal thread is thread that uses processor when no other tasks or SWIs or HWIs is using processor. Ideal task has lowest priority.
 
 ### 3. TI-RTOS-03-Hwis_Thread
+In this project, a Hwis thread was created statically.
+
 ### 4. TI-RTOS-04-Hwis_thread_dynamic
+In this project, a Hwis thread was created dynamically.
+
 ### 5. TI-RTOS-05-Swis_Thread 
-### 6. TI-RTOS-06-Swis-Hwis_dynamic	 
+In this project, a Swis thread was created.
+
+### 6. TI-RTOS-06-Swis-Hwis_dynamic
+In this project, how Hwi thread interact with Swi thread.
+
 ### 7. TI-RTOS-07-Task_Static
 ### 8. TI-RTOS-08-Task_Dynamic
 ### 9. TI-RTOS-09-Semaphores
@@ -50,11 +62,6 @@ In this project, an ideal thread is created in the static way. Ideal thread is t
 ***
 
 ## B. Bare Metal Embedded C Projects:  
-### 0. Links to important datasheet and documents.
-   a. MSP432P4111 Microcontroller Launchpad User's guide - http://www.ti.com/lit/ug/slau747b/slau747b.pdf.  
-   b. MSP432P411x, MSP432P401x datasheet - http://www.ti.com/lit/ds/symlink/msp432p4111.pdf.  
-   c. MSP432P4xx SimpleLink™ Microcontrollers Tecnical Reference Manual- https://www.ti.com/lit/ug/slau356i/slau356i.pdf.  
-
 
 ### 1. Blink. 
 This program plays with the onboard LED. It will turn on Onboard red LED (connected to P1.0) and switched RGB Led color in the sequence Red (P2.0) ->Green (P2.1) ->Blue (P2.2).  
